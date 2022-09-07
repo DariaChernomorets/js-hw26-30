@@ -8,10 +8,10 @@
         const result = +str + +revStr(str) + '';
         return result;
     }
-
+    let step = 1;
 
     const isPalindrome = (str) => {
-        let step = 0;
+
         if (str === revStr(str)) return str;
 
         let result = revSum(str);
@@ -19,18 +19,15 @@
 
         if  (result !== revStr(result)) {
             step++
-            return {
-                result: revSum(result),
-                step: step++
-            }
-
+            return isPalindrome(result)
         }
-        if (result === revStr(result)) return result;
+
+        if (result === revStr(result)) return  { result, step }
 
 
 
     }
 
-    console.log(isPalindrome('48'));
+    console.log(isPalindrome('96'));
 
 })();
