@@ -3,7 +3,7 @@
 
     const str ='Hello world';
 
-    const InsertWordInto  = (str) => {
+    const insertWordInto  = (str) => {
 
         let index = 0;
 
@@ -19,7 +19,7 @@
 
     }
 
-    const newString = InsertWordInto(str);
+    const newString = insertWordInto(str);
 
     const result1= newString('Odessa1');
     console.log(result1);
